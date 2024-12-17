@@ -1,8 +1,10 @@
 {% extends "layout.html" %}
 {% block body %}
-<h1>Result of your calculation</h1>
-<p>{{}} = {{}}</p>
+<h2>Result of your calculation</h2>
+<h3>{{ input_measure }} = {{ output_measure }}</h3>
 <br>
 <br>
-<button>Reset</button>
+<a href="/">
+    <button type="submit">reset</button>
+</a>
 {% endblock body %}

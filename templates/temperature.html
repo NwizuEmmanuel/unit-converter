@@ -2,10 +2,11 @@
 {% block body %}
 <section>
     <form action="/convert" method="post">
-        <label for="length">
-            Enter the length to convert
+        <input type="hidden" name="convert_type" value="temperature">
+        <label for="measure">
+            Enter the temperature to convert
             <br>
-            <input type="number" name="length" id="length">
+            <input type="number" name="measure" id="measure" value="1">
         </label>
         <br>
         <br>
@@ -13,8 +14,8 @@
             Unit to convert form
             <br>
             <select name="convert_from" id="convert_from">
-                <option value="celsius">Celsius</option>
-                <option value="fahrenheit">Fahrenheit</option>
+                <option value="degC" selected>Celsius</option>
+                <option value="degF">Fahrenheit</option>
                 <option value="kelvin">Kelvin</option>
             </select>
         </label>
@@ -24,9 +25,9 @@
             Unit to convert to
             <br>
             <select name="convert_to" id="convert_to">
-                <option value="c">Celsius</option>
-                <option value="f">Fahrenheit</option>
-                <option value="k">Kelvin</option>
+                <option value="degC">Celsius</option>
+                <option value="degF" selected>Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
             </select>
         </label>
         <br>

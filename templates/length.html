@@ -2,10 +2,11 @@
 {% block body %}
 <section>
     <form action="/convert" method="post">
-        <label for="length">
+        <input type="hidden" name="convert_type" value="length">
+        <label for="measure">
             Enter the length to convert
             <br>
-            <input type="number" name="length" id="length">
+            <input type="number" name="measure" id="measure" value="1">
         </label>
         <br>
         <br>
@@ -14,7 +15,7 @@
             <br>
             <select name="convert_from" id="convert_from">
                 <option value="millimeter">Millimeter</option>
-                <option value="centimeter">Centimeter</option>
+                <option value="centimeter" selected>Centimeter</option>
                 <option value="meter">Meter</option>
                 <option value="kilometer">Kilometer</option>
                 <option value="inch">Inch</option>
@@ -29,7 +30,7 @@
             Unit to convert to
             <br>
             <select name="convert_to" id="convert_to">
-                <option value="millimeter">Millimeter</option>
+                <option value="millimeter" selected>Millimeter</option>
                 <option value="centimeter">Centimeter</option>
                 <option value="meter">Meter</option>
                 <option value="kilometer">Kilometer</option>

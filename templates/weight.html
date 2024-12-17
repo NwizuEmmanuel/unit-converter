@@ -2,10 +2,11 @@
 {% block body %}
 <section>
     <form action="/convert" method="post">
-        <label for="length">
-            Enter the length to convert
+        <input type="hidden" name="convert_type" value="weight">
+        <label for="measure">
+            Enter the weight to convert
             <br>
-            <input type="number" name="length" id="length">
+            <input type="number" name="measure" id="measure" value="1">
         </label>
         <br>
         <br>
@@ -15,7 +16,7 @@
             <select name="convert_from" id="convert_from">
                 <option value="mg">Milligram</option>
                 <option value="g">Gram</option>
-                <option value="kg">Kilogram</option>
+                <option value="kg" selected>Kilogram</option>
                 <option value="oz">Ounce</option>
                 <option value="lb">Pound</option>
             </select>
@@ -27,7 +28,7 @@
             <br>
             <select name="convert_to" id="convert_to">
                 <option value="milligram">Milligram</option>
-                <option value="gram">Gram</option>
+                <option value="gram" selected>Gram</option>
                 <option value="kilogram">Kilogram</option>
                 <option value="ounce">Ounce</option>
                 <option value="pound">Pound</option>
