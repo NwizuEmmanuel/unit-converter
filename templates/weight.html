@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+<section>
+    <form action="/convert" method="post">
+        <label for="length">
+            Enter the length to convert
+            <br>
+            <input type="number" name="length" id="length">
+        </label>
+        <br>
+        <br>
+        <label for="convert_from">
+            Unit to convert form
+            <br>
+            <select name="convert_from" id="convert_from">
+                <option value="mg">Milligram</option>
+                <option value="g">Gram</option>
+                <option value="kg">Kilogram</option>
+                <option value="oz">Ounce</option>
+                <option value="lb">Pound</option>
+            </select>
+        </label>
+        <br>
+        <br>
+        <label for="convert_to">
+            Unit to convert to
+            <br>
+            <select name="convert_to" id="convert_to">
+                <option value="milligram">Milligram</option>
+                <option value="gram">Gram</option>
+                <option value="kilogram">Kilogram</option>
+                <option value="ounce">Ounce</option>
+                <option value="pound">Pound</option>
+            </select>
+        </label>
+        <br>
+        <br>
+        <input type="submit" value="convert">
+    </form>
+</section>
+{% endblock body %}

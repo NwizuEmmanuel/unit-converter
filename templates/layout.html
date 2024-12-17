@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <div><h1>Unit converter</h1></div>
+            <a href="/length" target="_self">Length</a>
+            <a href="/weight" target="_self">Weight</a>
+            <a href="/temperature" target="_Self">Temperature</a>
+        </nav>
+        <br>
+        {% block body %}{% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block body %}
+<section>
+    <form action="/convert" method="post">
+        <label for="length">
+            Enter the length to convert
+            <br>
+            <input type="number" name="length" id="length">
+        </label>
+        <br>
+        <br>
+        <label for="convert_from">
+            Unit to convert form
+            <br>
+            <select name="convert_from" id="convert_from">
+                <option value="millimeter">Millimeter</option>
+                <option value="centimeter">Centimeter</option>
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
+                <option value="inch">Inch</option>
+                <option value="foot">Foot</option>
+                <option value="yard">Yard</option>
+                <option value="mile">Mile</option>
+            </select>
+        </label>
+        <br>
+        <br>
+        <label for="convert_to">
+            Unit to convert to
+            <br>
+            <select name="convert_to" id="convert_to">
+                <option value="millimeter">Millimeter</option>
+                <option value="centimeter">Centimeter</option>
+                <option value="meter">Meter</option>
+                <option value="kilometer">Kilometer</option>
+                <option value="inch">Inch</option>
+                <option value="foot">Foot</option>
+                <option value="yard">Yard</option>
+                <option value="mile">Mile</option>
+            </select>
+        </label>
+        <br>
+        <br>
+        <input type="submit" value="convert">
+    </form>
+</section>
+{% endblock body %}
